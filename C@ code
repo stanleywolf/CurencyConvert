@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CurencyConvert
+{
+    class CurencyConvert
+    {
+        static void Main(string[] args)
+        {
+            double money = double.Parse(Console.ReadLine());
+            string currentCurency = Console.ReadLine();
+            string wantedCurency = Console.ReadLine();
+            
+
+            
+            if (currentCurency == "USD")
+            {
+                money = money * 1.79549;
+            }
+            else if (currentCurency == "EUR")
+            {
+                money = money * 1.95583;
+            }
+            else if (currentCurency == "GBP")
+            {
+                money = money * 2.53405;
+            }
+            
+           if(wantedCurency=="USD")
+            {
+                money = money / 1.79549;
+
+            }
+            else if(wantedCurency=="EUR")
+            {
+                money = money / 1.95583;
+
+            }
+            else if(wantedCurency=="GBP")
+            {
+                money = money / 2.53405;
+
+            }
+            Console.WriteLine("{0} {1}",Math.Round(money, 2),wantedCurency);
+        }
+    }
+}
